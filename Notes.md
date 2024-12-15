@@ -6,3 +6,6 @@
 - Added Navbar
 - Installed React Router
 - Created Routes with BrowserRouter(including children routes)
+- Installed cors on backend - with origin and credentials
+- Made axios request withCredentials to store cookie
+

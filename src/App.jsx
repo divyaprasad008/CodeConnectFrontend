@@ -4,6 +4,9 @@ import Body from "./components/Body.jsx"
 import Dashboard from "./components/Dashboard.jsx"
 import Profile from "./components/profile.jsx"
 import Connections from "./components/Connections.jsx"
+import BodyFull from "./components/BodyFull.jsx"
+import Login from "./components/Login.jsx"
+import Signup from "./components/Signup.jsx"
 
 function App() {
 
@@ -11,14 +14,16 @@ function App() {
     <>  
       <BrowserRouter basename="/">
         <Routes>
+          <Route path="/" element={<BodyFull />}>
+            <Route path="/login" element={<Login />}/>
+            <Route path="/signup" element={<Signup />}/>
+          </Route>
           <Route path="/" element={<Body />}>
             <Route path="/dashboard" element={<Dashboard />}/>
             <Route path="/profile" element={<Profile />}/>
             <Route path="/connections" element={<Connections />}/>
 
           </Route>
-          <Route path="/login" element={<div>Login</div>}/>
-          <Route path="/signup" element={<div>Signup</div>}/>
         </Routes>
       </BrowserRouter>    
       {/*<Navbar />
